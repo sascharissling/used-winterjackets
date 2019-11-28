@@ -102,6 +102,7 @@ export default function Sell() {
           value={brand}
           onChange={event => setItemBrand(event.target.value)}
         >
+          <option value="">Wähle eine Marke</option>
           <option value="Patagonia">Patagonia</option>
           <option value="The North Face">The North Face</option>
           <option value="Jack Wolfskin">Jack Wolfskin</option>
