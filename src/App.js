@@ -11,20 +11,22 @@ import Footer from "./components/Footer";
 import Jackets from "./pages/Jackets";
 import Sell from "./pages/Sell";
 import Profile from "./pages/Profile";
+import JacketDetail from "./pages/JacketDetail";
 
 ///STYLE Start
 const ContentContainer = styled.main`
   margin: 0;
   flex-grow: 1;
+  flex-basis: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   overflow: auto;
 `;
 
-const AppContainer =styled.div`
-  height: 100vh; 
-  display: flex; 
+const AppContainer = styled.div`
+  height: 100vh;
+  display: flex;
   flex-flow: column nowrap;
 `;
 ///STYLE End
@@ -38,7 +40,8 @@ function App() {
         <ContentContainer>
           <Switch>
             <Route exact path="/" component={App} />
-            <Route path="/jackets" component={Jackets} />
+            <Route exact path="/jackets" component={Jackets} />
+            <Route path="/jackets/:id" component={JacketDetail} />
             <Route path="/sell" component={Sell} />
             <Route path="/profile" component={Profile} />
           </Switch>
