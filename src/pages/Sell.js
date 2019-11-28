@@ -17,6 +17,9 @@ export default function Sell() {
         Jacket Name <input />
       </label>
       <label>
+        Jacket Brand <input />
+      </label>
+      <label>
         Jacket Price <input />
       </label>
       <label>

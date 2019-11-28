@@ -9,6 +9,7 @@ const RouterLink = styled(Link)`
 `;
 
 const Marketplace = styled.div`
+  max-width: 800px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -25,36 +26,38 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  box-shadow: 3px 3px 4px 0px rgba(102, 102, 102, 1);
+  /* box-shadow: 3px 3px 4px 0px rgba(102, 102, 102, 1); */
   align-items: center;
 `;
 
 const ItemTitle = styled.h4`
   color: black;
-  margin: 5px;
-`;
-
-const ItemDescription = styled.p`
-  color: grey;
-  font-style: italic;
+  margin: 1px;
   font-size: 0.8em;
-  margin: 5px 10px 15px 10px;
 `;
 
 const ItemPrice = styled.h5`
   color: purple;
-  font-size: 1.5em;
-  margin: 5px 10px 15px 10px;
+  font-size: 1em;
+  margin: 1px;
 `;
 
 const ItemSize = styled.h5`
   color: grey;
   font-size: 1em;
-  margin: 5px 10px 15px 10px;
+  margin: 1px;
 `;
 const ItemImage = styled.img`
   width: 100%;
+  height: 200px;
   margin: 0;
+  object-fit: cover;
+`;
+
+const Details = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
 `;
 //STYLE End
 
@@ -78,13 +81,11 @@ export default function Jackets() {
           <Container>
             <RouterLink to={`/jackets/${jacket.id}`} key={jacket.id}>
               <ItemImage src={jacket.img} alt="item image" />
-
-              <ItemTitle>{jacket.name}</ItemTitle>
-
-              <ItemDescription>{jacket.description}</ItemDescription>
-
-              <ItemPrice>{jacket.price}€</ItemPrice>
-              <ItemSize>{jacket.size}</ItemSize>
+              <Details>
+                <ItemTitle>{jacket.brand}</ItemTitle>
+                <ItemPrice>{jacket.price}€</ItemPrice>
+                <ItemSize>{jacket.size}</ItemSize>
+              </Details>
             </RouterLink>
           </Container>
         ))}
