@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   height: 70px;
   margin: 0;
   display: flex;

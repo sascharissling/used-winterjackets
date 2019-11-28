@@ -9,7 +9,7 @@ const LinkName = styled(Link)`
   text-decoration: none;
 `;
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
   height: 70px;
   margin: 0;
   display: flex;

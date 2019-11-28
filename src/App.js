@@ -13,19 +13,25 @@ import Sell from "./pages/Sell";
 import Profile from "./pages/Profile";
 
 ///STYLE Start
-const ContentContainer = styled.div`
-  height: 82vh;
+const ContentContainer = styled.main`
   margin: 0;
+  flex-grow: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   overflow: auto;
 `;
+
+const AppContainer =styled.div`
+  height: 100vh; 
+  display: flex; 
+  flex-flow: column nowrap;
+`;
 ///STYLE End
 
 function App() {
   return (
-    <>
+    <AppContainer>
       <GlobalStyles />
       <Router>
         <Header />
@@ -39,7 +45,7 @@ function App() {
         </ContentContainer>
         <Footer />
       </Router>
-    </>
+    </AppContainer>
   );
 }
 

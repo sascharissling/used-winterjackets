@@ -23,6 +23,9 @@ export default function Sell() {
         Jacket Condition <input />
       </label>
       <label>
+        Jacket Location <input />
+      </label>
+      <label>
         Jacket Size <input />
       </label>
       <label>
