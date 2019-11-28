@@ -21,6 +21,7 @@ const Marketplace = styled.div`
 const Container = styled.div`
   background: #ffe;
   width: 40%;
+  max-width: 200px;
   height: auto;
   margin: 10px;
   display: flex;

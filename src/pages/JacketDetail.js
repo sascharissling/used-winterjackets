@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 //STYLE Start
 const JacketDetailContainer = styled.div`
-  width: 90%;
+  width: 75%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -11,20 +11,26 @@ const JacketDetailContainer = styled.div`
 `;
 
 const JacketImage = styled.img`
-  width: 270px;
-  border-radius: 15px;
+  width: 60%;
+  max-width: 500px; 
+  margin 5px; 
+  
 `;
 
 const Label = styled.div`
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: grey;
+  background: #49d1cc;
   margin: 5px;
   padding: 15px;
   height: 20px;
   color: #ffe;
+`;
+
+const JacketName = styled.h3`
+  margin: 5px;
 `;
 
 const ItemTags = styled.div`
@@ -34,7 +40,25 @@ const ItemTags = styled.div`
 const ItemPrice = styled.h5`
   color: purple;
   font-size: 1.5em;
-  margin: 5px 10px 15px 10px;
+  margin: 5px;
+`;
+
+const JacketDescription = styled.p`
+  text-align: center;
+`;
+
+const ContactButton = styled.a`
+  font-size: 0.8rem;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #49d1cc;
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 2px 0px rgba(102, 102, 102, 1);
+  color: #ffe;
 `;
 //STYLE End
 
@@ -54,18 +78,20 @@ export default function JacketDetail({ match }) {
   }, []);
 
   return (
-    <JacketDetailContainer>
-      <h3>{jacket.name}</h3>
+    <>
       <JacketImage src={jacket.img} alt={jacket.name} />
-      <ItemTags>
-        <Label>{jacket.size}</Label>
-        <Label>{jacket.condition}</Label>
-        <Label>{jacket.location}</Label>
-      </ItemTags>
-      <div>{jacket.description}</div>
-      <ItemPrice>{jacket.price} €</ItemPrice>
-      <div>{jacket.sellerEmail}</div>
-    </JacketDetailContainer>
+      <JacketDetailContainer>
+        <JacketName>{jacket.name}</JacketName>
+        <ItemTags>
+          <Label>{jacket.size}</Label>
+          <Label>{jacket.condition}</Label>
+          <Label>{jacket.location}</Label>
+        </ItemTags>
+        <JacketDescription>{jacket.description}</JacketDescription>
+        <ItemPrice>{jacket.price} €</ItemPrice>
+        <ContactButton href="mailto:">Anbieter Kontaktieren</ContactButton>
+      </JacketDetailContainer>
+    </>
   );
 }
 
