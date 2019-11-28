@@ -88,7 +88,12 @@ export default function JacketDetail({ match }) {
           <Label>{jacket.location}</Label>
         </ItemTags>
         <JacketDescription>{jacket.description}</JacketDescription>
-        <ItemPrice>{jacket.price} €</ItemPrice>
+        <ItemPrice>
+          {parseInt(jacket.price)
+            .toFixed(2)
+            .toLocaleString("de")}
+          €
+        </ItemPrice>
         <ContactButton
           href={"mailto:" + jacket.sellerEmail + "?subject=" + jacket.name}
         >

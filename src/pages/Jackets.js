@@ -84,7 +84,9 @@ export default function Jackets() {
               <ItemImage src={jacket.img} alt="item image" />
               <Details>
                 <ItemTitle>{jacket.brand}</ItemTitle>
-                <ItemPrice>{jacket.price}€</ItemPrice>
+                <ItemPrice>
+                  {parseInt(jacket.price).toFixed(2).toLocaleString("de-DE")}€
+                </ItemPrice>
                 <ItemSize>{jacket.size}</ItemSize>
               </Details>
             </RouterLink>
