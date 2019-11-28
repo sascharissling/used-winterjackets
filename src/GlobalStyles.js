@@ -14,7 +14,7 @@ export default function GlobalStyles() {
         body {
           margin: 0;
           font-family: "Source Sans Pro", sans-serif;
-          background: #48d1cc;
+          background: #ffe;
         }
       `}
     />
