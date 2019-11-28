@@ -54,7 +54,7 @@ export default function Sell() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const data = await fetch("http://localhost:3004/jackets", {
+    await fetch("http://localhost:3004/jackets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
