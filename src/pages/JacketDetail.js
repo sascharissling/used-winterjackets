@@ -89,7 +89,11 @@ export default function JacketDetail({ match }) {
         </ItemTags>
         <JacketDescription>{jacket.description}</JacketDescription>
         <ItemPrice>{jacket.price} €</ItemPrice>
-        <ContactButton href="mailto:">Anbieter Kontaktieren</ContactButton>
+        <ContactButton
+          href={"mailto:" + jacket.sellerEmail + "?subject=" + jacket.name}
+        >
+          Anbieter Kontaktieren
+        </ContactButton>
       </JacketDetailContainer>
     </>
   );
