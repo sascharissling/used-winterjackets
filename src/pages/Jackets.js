@@ -79,8 +79,8 @@ export default function Jackets() {
     <>
       <Marketplace>
         {jackets.map(jacket => (
-          <Container>
-            <RouterLink to={`/jackets/${jacket.id}`} key={jacket.id}>
+          <Container key={jacket.id}>
+            <RouterLink to={`/jackets/${jacket.id}`}>
               <ItemImage src={jacket.img} alt="item image" />
               <Details>
                 <ItemTitle>{jacket.brand}</ItemTitle>
