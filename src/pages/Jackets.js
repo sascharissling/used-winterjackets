@@ -85,7 +85,10 @@ export default function Jackets() {
               <Details>
                 <ItemTitle>{jacket.brand}</ItemTitle>
                 <ItemPrice>
-                  {parseInt(jacket.price).toFixed(2).toLocaleString("de-DE")}€
+                  {parseInt(jacket.price)
+                    .toFixed(2)
+                    .toLocaleString("de-DE")}
+                  €
                 </ItemPrice>
                 <ItemSize>{jacket.size}</ItemSize>
               </Details>
