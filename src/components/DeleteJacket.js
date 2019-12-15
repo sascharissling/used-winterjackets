@@ -45,20 +45,20 @@ const Select = styled.select`
 
 //STYLE End
 export default function DeleteJacket() {
-  const [name, setItemName] = React.useState("");
+  const [id, setId] = React.useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
-    await fetch("http://localhost:3004/jackets", {
-      method: "Delete",
+    await fetch(`http://localhost:3004/jackets/${event}`, {
+      method: "DELETE",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        name
+        id
       })
     });
-    setItemName("");
+    setId("");
   }
 
   return (
@@ -66,8 +66,11 @@ export default function DeleteJacket() {
       <Form onSubmit={handleSubmit}>
         <label>
           Angebot Löschen
-          <Select>
-            <option>JacketName</option>
+          <Select
+            value={parseInt(id)}
+            onChange={event => setId(event.target.value)}
+          >
+            <option value={1}>Wellensteyn Winterjacke L</option>
           </Select>
         </label>
         <SubmitButton>Angebot Entfernen</SubmitButton>
