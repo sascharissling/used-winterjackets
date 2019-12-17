@@ -73,6 +73,7 @@ export default function JacketDetail({ match }) {
     console.log(item);
     setJacket(item);
   }
+
   React.useEffect(() => {
     getJacket();
   }, []);

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import DeleteJacket from "../components/DeleteJacket";
 
 const UserProfile = styled.div`
   background: transparent;
@@ -18,7 +17,6 @@ export default function Profile() {
       <button>User Picture</button>
       <button>User Email</button>
       <button>User Items On Sale</button>
-      <DeleteJacket></DeleteJacket>
     </UserProfile>
   );
 }

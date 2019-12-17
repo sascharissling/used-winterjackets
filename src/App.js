@@ -39,7 +39,7 @@ function App() {
         <Header />
         <ContentContainer>
           <Switch>
-            <Route exact path="/" component={App} />
+            <Route exact path="/" component={Jackets} />
             <Route exact path="/jackets" component={Jackets} />
             <Route path="/jackets/:id" component={JacketDetail} />
             <Route path="/sell" component={Sell} />
