@@ -77,7 +77,7 @@ export default function Jackets() {
 
   return (
     <>
-      <Marketplace>
+      <Marketplace data-test-id="marketplace">
         {jackets.map(jacket => (
           <Container key={jacket.id}>
             <RouterLink to={`/jackets/${jacket.id}`}>
@@ -99,11 +99,3 @@ export default function Jackets() {
     </>
   );
 }
-
-//MAP
-//Image
-//Name
-//Condition
-//Size
-//Price
-//Contact Seller

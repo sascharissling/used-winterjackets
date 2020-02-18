@@ -83,11 +83,12 @@ export default function Sell() {
   }
 
   return (
-    <SalesForm onSubmit={handleSubmit}>
+    <SalesForm data-test-id="sales-form" onSubmit={handleSubmit}>
       <h3>Verkaufe deine Jacke</h3>
       <InputField>
         Name der Anzeige
         <input
+          data-test-id="ad-name"
           autoFocus
           type="text"
           placeholder="z.B. Blaue Patagonia Jacke"
@@ -98,6 +99,7 @@ export default function Sell() {
       <InputField>
         Marke deiner Jacke
         <Select
+          data-test-id="brand-name"
           placeholder="Marke der Jacke"
           value={brand}
           onChange={event => setItemBrand(event.target.value)}
@@ -116,6 +118,7 @@ export default function Sell() {
       <InputField>
         Was soll die Jacke kosten?
         <input
+          data-test-id="price"
           type="number"
           placeholder="z.B. 100€"
           value={price}
@@ -125,6 +128,7 @@ export default function Sell() {
       <InputField>
         Jacket Condition
         <Select
+          data-test-id="jacket-condition"
           placeholder="Zustand der Jacke"
           value={condition}
           onChange={event => setItemCondition(event.target.value)}
@@ -139,6 +143,7 @@ export default function Sell() {
       <InputField>
         Jacket Image URL
         <input
+          data-test-id="image-url"
           type="url"
           placeholder="z.B. http://url.de/jacke.png"
           value={img}
@@ -148,6 +153,7 @@ export default function Sell() {
       <InputField>
         Wo ist die Jacke?
         <input
+          data-test-id="jacket-location"
           type="text"
           placeholder="z.B. Köln"
           value={location}
@@ -157,6 +163,7 @@ export default function Sell() {
       <InputField>
         Jacket Size
         <Select
+          data-test-id="jacket-size"
           placeholder="Marke der Jacke"
           value={size}
           onChange={event => setItemSize(event.target.value)}
@@ -172,6 +179,7 @@ export default function Sell() {
       <InputField>
         Beschreibe deine Jacke
         <textarea
+          data-test-id="jacket-description"
           type="text"
           rows="4"
           placeholder="z.B. Verkaufe diese schöne Winterjacke. Habe Sie ein Jahr getragen und brauche Sie nun nicht mehr, da ich in Thailand wohne."
@@ -182,13 +190,14 @@ export default function Sell() {
       <InputField>
         So kann man mich erreichen
         <input
+          data-test-id="seller-email"
           type="email"
           placeholder="Deine Email"
           value={sellerEmail}
           onChange={event => setItemEmail(event.target.value)}
         />
       </InputField>
-      <SubmitButton>Einstellen</SubmitButton>
+      <SubmitButton data-test-id="submit-button">Einstellen</SubmitButton>
     </SalesForm>
   );
 }

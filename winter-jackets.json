@@ -383,6 +383,18 @@
       "description": "nnnn",
       "sellerEmail": "dartur@web.de",
       "id": 32
+    },
+    {
+      "name": "Coole Test Jacke",
+      "brand": "Patagonia",
+      "price": "120",
+      "condition": "Gut",
+      "img": "https://img01.ztat.net/article/PA/94/2F/00/2Q/11/PA942F002-Q11@26.jpg?imwidth=1800",
+      "location": "Montabaur",
+      "size": "XL",
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+      "sellerEmail": "w@w.de",
+      "id": 33
     }
   ]
 }

@@ -41,15 +41,21 @@ export default function Footer() {
     <FooterContainer>
       <MenuButton>
         <AcUnitIcon />
-        <LinkName to="/jackets">Jackets</LinkName>
+        <LinkName data-test-id="jackets" to="/jackets">
+          Jackets
+        </LinkName>
       </MenuButton>
       <MenuButton>
         <AddCircleOutlineIcon />
-        <LinkName to="/sell">Sell</LinkName>
+        <LinkName data-test-id="sell" to="/sell">
+          Sell
+        </LinkName>
       </MenuButton>
       <MenuButton>
         <AccountCircleIcon />
-        <LinkName to="/profile">Profile</LinkName>
+        <LinkName data-test-id="profile" to="/profile">
+          Profile
+        </LinkName>
       </MenuButton>
     </FooterContainer>
   );
